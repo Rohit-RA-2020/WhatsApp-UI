@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/constants.dart';
 import 'package:whatsapp_ui/screens/call_screen.dart';
 import 'package:whatsapp_ui/screens/camera.dart';
-import 'package:whatsapp_ui/screens/status_sceen.dart';
+import 'package:whatsapp_ui/screens/status_screen.dart';
 
 import 'chat_screen.dart';
 

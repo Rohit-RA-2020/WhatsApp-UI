@@ -14,7 +14,7 @@ class NewContactItem extends StatelessWidget {
       child: ListTile(
         subtitle: const Text(
           'Status goes here',
-          style: TextStyle(fontSize: 11.0),
+          style: TextStyle(fontSize: 12.0),
         ),
         leading: CircleAvatar(
           backgroundColor: Colors.teal,

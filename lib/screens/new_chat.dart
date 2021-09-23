@@ -34,13 +34,31 @@ class NewChat extends StatelessWidget {
       ),
       body: ListView(
         children: const <Widget>[
-          NewContactItem(
-            title: 'New Group',
-            image: Icon(Icons.people_sharp, color: Colors.white),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundColor: Colors.teal,
+              child: Icon(
+                Icons.people,
+                color: Colors.white,
+              ),
+            ),
+            title: Text(
+              'New group',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
-          NewContactItem(
-            title: 'New Contact',
-            image: Icon(Icons.person_add, color: Colors.white),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundColor: Colors.teal,
+              child: Icon(
+                Icons.person_add,
+                color: Colors.white,
+              ),
+            ),
+            title: Text(
+              'New Contact',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
           NewContactItem(
             title: 'Rohit ranjan',

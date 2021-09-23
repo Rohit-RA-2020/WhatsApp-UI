@@ -10,7 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: const Color(0xFF131C21),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF262D31),
+        ),
+      ),
       initialRoute: '/',
       routes: {
         '/': (context) => const HomeScreen(),

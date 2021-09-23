@@ -18,7 +18,7 @@ class StatusItem extends StatelessWidget {
       padding: const EdgeInsets.only(left: 8.0),
       child: ListTile(
         leading: const CircleAvatar(
-          backgroundColor: Color(0xFF2E7D32),
+          backgroundColor: Colors.teal,
           radius: 25,
           child: CircleAvatar(
             radius: 22,

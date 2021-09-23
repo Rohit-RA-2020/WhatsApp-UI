@@ -32,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen>
       length: 4,
       child: Scaffold(
         appBar: AppBar(
+          elevation: 0,
           title: const Text(
             'WhatsApp',
             style: TextStyle(color: kAppBarTextColor),

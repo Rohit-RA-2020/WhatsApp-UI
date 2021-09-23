@@ -17,7 +17,7 @@ class ChatItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 8.0, left: 3.0),
+      padding: const EdgeInsets.only(left: 3.0),
       child: ListTile(
         leading: const CircleAvatar(
           backgroundColor: Colors.teal,

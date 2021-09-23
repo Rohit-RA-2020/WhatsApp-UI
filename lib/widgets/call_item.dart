@@ -47,8 +47,8 @@ class CallItem extends StatelessWidget {
           ],
         ),
         trailing: (mode == 'video')
-            ? const Icon(Icons.videocam, color: Colors.green)
-            : const Icon(Icons.phone, color: Colors.green),
+            ? const Icon(Icons.videocam, color: Colors.tealAccent)
+            : const Icon(Icons.phone, color: Colors.tealAccent),
       ),
     );
   }

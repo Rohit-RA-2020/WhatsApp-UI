@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui/widgets/new_chat_item.dart';
+
 class NewChat extends StatelessWidget {
   const NewChat({Key? key}) : super(key: key);
 
@@ -28,6 +30,74 @@ class NewChat extends StatelessWidget {
               Icons.more_vert,
             ),
           )
+        ],
+      ),
+      body: ListView(
+        children: const <Widget>[
+          NewContactItem(
+            title: 'New Group',
+            image: Icon(Icons.people_sharp, color: Colors.white),
+          ),
+          NewContactItem(
+            title: 'New Contact',
+            image: Icon(Icons.person_add, color: Colors.white),
+          ),
+          NewContactItem(
+            title: 'Rohit ranjan',
+            image: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://thispersondoesnotexist.com/image'),
+            ),
+          ),
+          NewContactItem(
+            title: 'Name SurName',
+            image: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://thispersondoesnotexist.com/image'),
+            ),
+          ),
+          NewContactItem(
+            title: 'Random Name',
+            image: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://thispersondoesnotexist.com/image'),
+            ),
+          ),
+          NewContactItem(
+            title: 'Example Name',
+            image: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://thispersondoesnotexist.com/image'),
+            ),
+          ),
+          NewContactItem(
+            title: 'Rohit ranjan',
+            image: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://thispersondoesnotexist.com/image'),
+            ),
+          ),
+          NewContactItem(
+            title: 'Rohit',
+            image: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://thispersondoesnotexist.com/image'),
+            ),
+          ),
+          NewContactItem(
+            title: 'Ranjan',
+            image: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://thispersondoesnotexist.com/image'),
+            ),
+          ),
+          NewContactItem(
+            title: 'Unique Name',
+            image: CircleAvatar(
+              backgroundImage:
+                  NetworkImage('https://thispersondoesnotexist.com/image'),
+            ),
+          ),
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/screens/home_screen.dart';
+import 'package:whatsapp_ui/screens/new_chat.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomeScreen(),
+        '/newChat': (context) => const NewChat(),
       },
     );
   }

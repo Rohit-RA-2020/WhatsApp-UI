@@ -50,7 +50,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: kFabColor,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/newChat');
+          },
           child: const Icon(
             Icons.message_rounded,
             color: Colors.white,

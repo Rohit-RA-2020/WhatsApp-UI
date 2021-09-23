@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui/constants.dart';
 import 'package:whatsapp_ui/widgets/new_chat_item.dart';
 
 class NewChat extends StatelessWidget {
@@ -63,57 +64,49 @@ class NewChat extends StatelessWidget {
           NewContactItem(
             title: 'Rohit ranjan',
             image: CircleAvatar(
-              backgroundImage:
-                  NetworkImage('https://thispersondoesnotexist.com/image'),
+              backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewContactItem(
             title: 'Name SurName',
             image: CircleAvatar(
-              backgroundImage:
-                  NetworkImage('https://thispersondoesnotexist.com/image'),
+              backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewContactItem(
             title: 'Random Name',
             image: CircleAvatar(
-              backgroundImage:
-                  NetworkImage('https://thispersondoesnotexist.com/image'),
+              backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewContactItem(
             title: 'Example Name',
             image: CircleAvatar(
-              backgroundImage:
-                  NetworkImage('https://thispersondoesnotexist.com/image'),
+              backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewContactItem(
             title: 'Rohit ranjan',
             image: CircleAvatar(
-              backgroundImage:
-                  NetworkImage('https://thispersondoesnotexist.com/image'),
+              backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewContactItem(
             title: 'Rohit',
             image: CircleAvatar(
-              backgroundImage:
-                  NetworkImage('https://thispersondoesnotexist.com/image'),
+              backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewContactItem(
             title: 'Ranjan',
             image: CircleAvatar(
-              backgroundImage:
-                  NetworkImage('https://thispersondoesnotexist.com/image'),
+              backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewContactItem(
             title: 'Unique Name',
             image: CircleAvatar(
-              backgroundImage:
-                  NetworkImage('https://thispersondoesnotexist.com/image'),
+              backgroundImage: NetworkImage(kUrl),
             ),
           ),
         ],

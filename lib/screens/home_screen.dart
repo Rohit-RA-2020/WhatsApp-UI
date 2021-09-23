@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/constants.dart';
+import 'package:whatsapp_ui/screens/call_screen.dart';
+import 'package:whatsapp_ui/screens/camera.dart';
+import 'package:whatsapp_ui/screens/status_sceen.dart';
+
+import 'chat_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -8,11 +13,23 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen>
+    with SingleTickerProviderStateMixin {
+  TabController? tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    tabController = TabController(vsync: this, length: 4, initialIndex: 1)
+      ..addListener(() {
+        setState(() {});
+      });
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           title: const Text(
@@ -35,18 +52,27 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             )
           ],
-          bottom: const TabBar(
+          bottom: TabBar(
+            controller: tabController,
             unselectedLabelColor: Colors.grey,
+            indicatorSize: TabBarIndicatorSize.label,
             labelColor: kTabTextColor,
-            tabs: <Tab>[
+            tabs: const <Tab>[
+              Tab(icon: Icon(Icons.camera_alt)),
               Tab(text: 'CHATS'),
               Tab(text: 'STATUS'),
               Tab(text: 'CALLS'),
             ],
           ),
         ),
-        body: const Center(
-          child: Text('Home Screen'),
+        body: TabBarView(
+          controller: tabController,
+          children: const <Widget>[
+            CameraScreen(),
+            ChatScreen(),
+            StatusScreen(),
+            CallScreen(),
+          ],
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: kFabColor,

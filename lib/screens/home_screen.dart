@@ -56,7 +56,6 @@ class _HomeScreenState extends State<HomeScreen>
           bottom: TabBar(
             controller: tabController,
             unselectedLabelColor: Colors.grey,
-            indicatorSize: TabBarIndicatorSize.label,
             labelColor: kTabTextColor,
             tabs: const <Tab>[
               Tab(icon: Icon(Icons.camera_alt)),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui/details/chat_conversation.dart';
 import 'package:whatsapp_ui/screens/home_screen.dart';
 import 'package:whatsapp_ui/screens/new_chat.dart';
 
@@ -17,10 +18,11 @@ class MyApp extends StatelessWidget {
           backgroundColor: Color(0xFF262D31),
         ),
       ),
-      initialRoute: '/',
+      initialRoute: '/chatcon',
       routes: {
         '/': (context) => const HomeScreen(),
         '/newChat': (context) => const NewChat(),
+        '/chatcon': (context) => const ChatConversation()
       },
     );
   }

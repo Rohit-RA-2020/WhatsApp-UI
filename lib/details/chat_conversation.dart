@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/constants.dart';
 
 class ChatConversation extends StatelessWidget {
-  const ChatConversation({Key? key}) : super(key: key);
+  final String name;
+
+  const ChatConversation({Key? key, required this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +17,14 @@ class ChatConversation extends StatelessWidget {
           IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
         ],
         title: Row(
-          children: const <Widget>[
-            CircleAvatar(),
+          children: <Widget>[
+            const CircleAvatar(),
             Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text('Name'),
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                name,
+                style: const TextStyle(fontSize: 16),
+              ),
             )
           ],
         ),

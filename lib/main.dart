@@ -18,11 +18,10 @@ class MyApp extends StatelessWidget {
           backgroundColor: Color(0xFF262D31),
         ),
       ),
-      initialRoute: '/chatcon',
+      initialRoute: '/',
       routes: {
         '/': (context) => const HomeScreen(),
         '/newChat': (context) => const NewChat(),
-        '/chatcon': (context) => const ChatConversation()
       },
     );
   }

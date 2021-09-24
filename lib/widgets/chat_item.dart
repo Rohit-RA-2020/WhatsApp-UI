@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui/details/chat_conversation.dart';
 
 import '../constants.dart';
 
@@ -21,6 +22,14 @@ class ChatItem extends StatelessWidget {
       child: Column(
         children: [
           ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ChatConversation(name: name),
+                ),
+              );
+            },
             leading: const CircleAvatar(
               backgroundColor: Colors.teal,
               backgroundImage: NetworkImage(kUrl),
@@ -46,7 +55,7 @@ class ChatItem extends StatelessWidget {
             height: 1,
             indent: 10,
             endIndent: 10,
-          ) 
+          )
         ],
       ),
     );

@@ -23,10 +23,6 @@ class ChatScreen extends StatelessWidget {
         ChatItem(name: 'UnKnow', message: 'Who\'s this', time: '20:50'),
         ChatItem(name: 'Sample chat', message: 'Dummy text msg', time: '06:00'),
         ChatItem(name: 'Dummy Item', message: 'Sample Text msg', time: '17:00'),
-        ChatItem(
-            name: 'Example chat item',
-            message: 'Chat item message',
-            time: '13:00'),
         ChatItem(name: 'Last Chat', message: 'Last message', time: '19:00'),
       ],
     );

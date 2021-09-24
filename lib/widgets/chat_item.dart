@@ -46,7 +46,7 @@ class ChatItem extends StatelessWidget {
             height: 1,
             indent: 10,
             endIndent: 10,
-          )
+          ) 
         ],
       ),
     );

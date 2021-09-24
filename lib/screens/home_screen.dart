@@ -31,40 +31,42 @@ class _HomeScreenState extends State<HomeScreen>
     return DefaultTabController(
       length: 4,
       child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          title: const Text(
-            'WhatsApp',
-            style: TextStyle(color: kAppBarTextColor),
-          ),
-          actions: <IconButton>[
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.search,
-                color: kAppBarTextColor,
+        appBar: tabController!.index == 0
+            ? null
+            : AppBar(
+                elevation: 0,
+                title: const Text(
+                  'WhatsApp',
+                  style: TextStyle(color: kAppBarTextColor),
+                ),
+                actions: <IconButton>[
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.search,
+                      color: kAppBarTextColor,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.more_vert,
+                      color: kAppBarTextColor,
+                    ),
+                  )
+                ],
+                bottom: TabBar(
+                  controller: tabController,
+                  unselectedLabelColor: Colors.grey,
+                  labelColor: kTabTextColor,
+                  tabs: const <Tab>[
+                    Tab(icon: Icon(Icons.camera_alt)),
+                    Tab(text: 'CHATS'),
+                    Tab(text: 'STATUS'),
+                    Tab(text: 'CALLS'),
+                  ],
+                ),
               ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.more_vert,
-                color: kAppBarTextColor,
-              ),
-            )
-          ],
-          bottom: TabBar(
-            controller: tabController,
-            unselectedLabelColor: Colors.grey,
-            labelColor: kTabTextColor,
-            tabs: const <Tab>[
-              Tab(icon: Icon(Icons.camera_alt)),
-              Tab(text: 'CHATS'),
-              Tab(text: 'STATUS'),
-              Tab(text: 'CALLS'),
-            ],
-          ),
-        ),
         body: TabBarView(
           controller: tabController,
           children: const <Widget>[

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_ui/details/chat_conversation.dart';
+import 'package:whatsapp_ui/screens/calling_screen.dart';
 import 'package:whatsapp_ui/screens/home_screen.dart';
 import 'package:whatsapp_ui/screens/new_chat.dart';
 
@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomeScreen(),
         '/newChat': (context) => const NewChat(),
+        '/callingScreen': (context) => const CallingScreen()
       },
     );
   }

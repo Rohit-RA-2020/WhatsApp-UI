@@ -49,7 +49,10 @@ class ChatItem extends StatelessWidget {
                 Text(message, style: const TextStyle(color: Colors.white38))
               ],
             ),
-            trailing: Text(time, style: const TextStyle(color: Colors.white38)),
+            trailing: Padding(
+              padding: const EdgeInsets.only(bottom: 18.0),
+              child: Text(time, style: const TextStyle(color: Colors.white38)),
+            ),
           ),
           const Divider(
             height: 1,

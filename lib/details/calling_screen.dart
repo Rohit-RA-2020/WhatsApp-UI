@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CallingScreen extends StatefulWidget {
-  const CallingScreen({Key? key}) : super(key: key);
+  CallingScreen({required this.name});
+
+  String name;
 
   @override
   State<CallingScreen> createState() => _CallingScreenState();
@@ -23,9 +25,9 @@ class _CallingScreenState extends State<CallingScreen> {
                 radius: 40,
                 child: const Icon(Icons.person, size: 60),
                 backgroundColor: Colors.grey.shade900),
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(16.0),
-              child: Text('Rohit ranjan',
+              child: Text(widget.name,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
             ),
             const Text('Ringing', style: TextStyle(fontSize: 15))

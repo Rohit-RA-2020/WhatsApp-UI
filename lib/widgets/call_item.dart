@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui/details/calling_screen.dart';
 
 import '../constants.dart';
 
@@ -21,6 +22,14 @@ class CallItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 8.0, left: 3.0),
       child: ListTile(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CallingScreen(name: name),
+            ),
+          );
+        },
         leading: const CircleAvatar(
           backgroundColor: Colors.teal,
           backgroundImage: NetworkImage(kUrl),

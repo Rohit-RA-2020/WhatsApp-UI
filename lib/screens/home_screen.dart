@@ -124,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen>
                     : FloatingActionButton(
                         backgroundColor: kFabColor,
                         onPressed: () {
-                          Navigator.pushNamed(context, '/newChat');
+                          Navigator.pushNamed(context, '/newcall');
                         },
                         child: const Icon(
                           Icons.add_call,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/constants.dart';
+import 'package:whatsapp_ui/details/calling_screen.dart';
 
 class ChatConversation extends StatelessWidget {
   final String name;
@@ -13,7 +14,14 @@ class ChatConversation extends StatelessWidget {
         elevation: 0,
         actions: <IconButton>[
           IconButton(onPressed: () {}, icon: const Icon(Icons.videocam)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.phone)),
+          IconButton(
+              onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CallingScreen(name: name),
+                    ),
+                  ),
+              icon: const Icon(Icons.phone)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
         ],
         title: Row(
@@ -108,8 +116,12 @@ class ChatConversation extends StatelessWidget {
                       ),
                       const SizedBox(width: 5.0),
                       const CircleAvatar(
-                          backgroundColor: Colors.teal,
-                          child: Icon(Icons.mic, color: Colors.white))
+                        backgroundColor: Colors.teal,
+                        child: Icon(
+                          Icons.mic,
+                          color: Colors.white,
+                        ),
+                      )
                     ],
                   ),
                 ),

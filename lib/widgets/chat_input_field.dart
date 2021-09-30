@@ -38,13 +38,16 @@ class ChatInputField extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Icon(
-                      Icons.sentiment_satisfied_alt_outlined,
-                      color: Theme.of(context)
-                          .textTheme
-                          .bodyText1!
-                          .color!
-                          .withOpacity(0.64),
+                    InkWell(
+                      onTap: () => print('Emoji Icon Pressed'),
+                      child: Icon(
+                        Icons.sentiment_satisfied_alt_outlined,
+                        color: Theme.of(context)
+                            .textTheme
+                            .bodyText1!
+                            .color!
+                            .withOpacity(0.64),
+                      ),
                     ),
                     const SizedBox(width: kDefaultPadding / 4),
                     const Expanded(
@@ -77,7 +80,13 @@ class ChatInputField extends StatelessWidget {
               ),
             ),
             const SizedBox(width: kDefaultPadding),
-            const Icon(Icons.mic, color: Colors.teal),
+            CircleAvatar(
+              child: InkWell(
+                onTap: () => print('Mic Icon Pressed'),
+                child: const Icon(Icons.mic, color: Colors.white),
+              ),
+              backgroundColor: Colors.teal,
+            ),
           ],
         ),
       ),

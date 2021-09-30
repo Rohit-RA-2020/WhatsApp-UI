@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/constants.dart';
-import 'package:whatsapp_ui/widgets/new_call_item.dart';
+import 'package:whatsapp_ui/widgets/new_call_chat_item.dart';
 
 class NewCall extends StatelessWidget {
   const NewCall({Key? key}) : super(key: key);
@@ -62,48 +62,56 @@ class NewCall extends StatelessWidget {
             ),
           ),
           NewCallItem(
+            isCallScreen: true,
             title: 'Rohit ranjan',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
+            isCallScreen: true,
             title: 'Name SurName',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
+            isCallScreen: true,
             title: 'Random Name',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
+            isCallScreen: true,
             title: 'Example Name',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
+            isCallScreen: true,
             title: 'Rohit ranjan',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
+            isCallScreen: true,
             title: 'Rohit',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
+            isCallScreen: true,
             title: 'Ranjan',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
+            isCallScreen: true,
             title: 'Unique Name',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),

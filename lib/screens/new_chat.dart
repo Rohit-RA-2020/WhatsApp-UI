@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/constants.dart';
-import 'package:whatsapp_ui/widgets/new_chat_item.dart';
+import 'package:whatsapp_ui/widgets/new_call_chat_item.dart';
 
 class NewChat extends StatelessWidget {
   const NewChat({Key? key}) : super(key: key);
@@ -61,49 +61,57 @@ class NewChat extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
-          NewContactItem(
+          NewCallItem(
+            isCallScreen: false,
             title: 'Rohit ranjan',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
-          NewContactItem(
+          NewCallItem(
+            isCallScreen: false,
             title: 'Name SurName',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
-          NewContactItem(
+          NewCallItem(
+            isCallScreen: false,
             title: 'Random Name',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
-          NewContactItem(
+          NewCallItem(
+            isCallScreen: false,
             title: 'Example Name',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
-          NewContactItem(
+          NewCallItem(
+            isCallScreen: false,
             title: 'Rohit ranjan',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
-          NewContactItem(
+          NewCallItem(
+            isCallScreen: false,
             title: 'Rohit',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
-          NewContactItem(
+          NewCallItem(
+            isCallScreen: false,
             title: 'Ranjan',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
-          NewContactItem(
+          NewCallItem(
+            isCallScreen: false,
             title: 'Unique Name',
             image: CircleAvatar(
               backgroundImage: NetworkImage(kUrl),

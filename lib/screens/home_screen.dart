@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen>
                               elevation: 2,
                               backgroundColor: Colors.black,
                               onPressed: () {
-                                Navigator.pushNamed(context, '/newChat');
+                                print('Write Status Button Pressed');
                               },
                               child: const Icon(
                                 Icons.edit,
@@ -112,7 +112,9 @@ class _HomeScreenState extends State<HomeScreen>
                           FloatingActionButton(
                             backgroundColor: kFabColor,
                             onPressed: () {
-                              Navigator.pushNamed(context, '/newChat');
+                              setState(() {
+                                tabController!.index = 0;
+                              });
                             },
                             child: const Icon(
                               Icons.camera_alt,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_ui/details/calling_screen.dart';
 import 'package:whatsapp_ui/screens/home_screen.dart';
 import 'package:whatsapp_ui/screens/new_call.dart';
 import 'package:whatsapp_ui/screens/new_chat.dart';

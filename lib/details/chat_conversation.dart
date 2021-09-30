@@ -5,9 +5,9 @@ import 'package:whatsapp_ui/widgets/chat_input_field.dart';
 import '../constants.dart';
 
 class ChatConversation extends StatelessWidget {
-  ChatConversation({required this.name});
+  const ChatConversation({Key? key, required this.name}) : super(key: key);
 
-  String name;
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,11 @@ class ChatConversation extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: Row(
           children: <Widget>[
-            const BackButton(),
+            InkWell(
+                child: const Icon(Icons.arrow_back),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
             const CircleAvatar(backgroundImage: NetworkImage(kUrl)),
             const SizedBox(width: 20.0 * 0.75),
             Column(

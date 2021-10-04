@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/constants.dart';
 import 'package:whatsapp_ui/screens/call_screen.dart';
 import 'package:whatsapp_ui/screens/camera.dart';
+import 'package:whatsapp_ui/screens/new_call_chat.dart';
 import 'package:whatsapp_ui/screens/status_screen.dart';
 
 import 'chat_screen.dart';
@@ -82,7 +83,12 @@ class _HomeScreenState extends State<HomeScreen>
                 ? FloatingActionButton(
                     backgroundColor: kFabColor,
                     onPressed: () {
-                      Navigator.pushNamed(context, '/newChat');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => NewCallChat(isCallScreen: false),
+                        ),
+                      );
                     },
                     child: const Icon(
                       Icons.message_rounded,
@@ -126,7 +132,12 @@ class _HomeScreenState extends State<HomeScreen>
                     : FloatingActionButton(
                         backgroundColor: kFabColor,
                         onPressed: () {
-                          Navigator.pushNamed(context, '/newcall');
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => NewCallChat(isCallScreen: true),
+                            ),
+                          );
                         },
                         child: const Icon(
                           Icons.add_call,

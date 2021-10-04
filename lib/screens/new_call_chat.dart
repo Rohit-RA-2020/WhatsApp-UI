@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/constants.dart';
 import 'package:whatsapp_ui/widgets/new_call_chat_item.dart';
 
-class NewCall extends StatelessWidget {
-  const NewCall({Key? key}) : super(key: key);
+class NewCallChat extends StatelessWidget {
+  NewCallChat({Key? key, required this.isCallScreen}) : super(key: key);
+
+  bool isCallScreen;
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +36,9 @@ class NewCall extends StatelessWidget {
         ],
       ),
       body: ListView(
-        children: const <Widget>[
-          ListTile(
-            leading: CircleAvatar(
+        children: <Widget>[
+           ListTile(
+            leading: const CircleAvatar(
               backgroundColor: Colors.teal,
               child: Icon(
                 Icons.people,
@@ -44,11 +46,11 @@ class NewCall extends StatelessWidget {
               ),
             ),
             title: Text(
-              'New group',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              isCallScreen ? 'New group call' : 'New Group',
+              style: const TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
-          ListTile(
+          const ListTile(
             leading: CircleAvatar(
               backgroundColor: Colors.teal,
               child: Icon(
@@ -62,58 +64,58 @@ class NewCall extends StatelessWidget {
             ),
           ),
           NewCallItem(
-            isCallScreen: true,
+            isCallScreen: isCallScreen,
             title: 'Rohit ranjan',
-            image: CircleAvatar(
+            image: const CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
-            isCallScreen: true,
+            isCallScreen: isCallScreen,
             title: 'Name SurName',
-            image: CircleAvatar(
+            image: const CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
-            isCallScreen: true,
+            isCallScreen: isCallScreen,
             title: 'Random Name',
-            image: CircleAvatar(
+            image: const CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
-            isCallScreen: true,
+            isCallScreen: isCallScreen,
             title: 'Example Name',
-            image: CircleAvatar(
+            image: const CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
-            isCallScreen: true,
+            isCallScreen: isCallScreen,
             title: 'Rohit ranjan',
-            image: CircleAvatar(
+            image: const CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
-            isCallScreen: true,
+            isCallScreen: isCallScreen,
             title: 'Rohit',
-            image: CircleAvatar(
+            image: const CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
-            isCallScreen: true,
+            isCallScreen: isCallScreen,
             title: 'Ranjan',
-            image: CircleAvatar(
+            image: const CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),
           NewCallItem(
-            isCallScreen: true,
+            isCallScreen: isCallScreen,
             title: 'Unique Name',
-            image: CircleAvatar(
+            image: const CircleAvatar(
               backgroundImage: NetworkImage(kUrl),
             ),
           ),

@@ -86,7 +86,8 @@ class _HomeScreenState extends State<HomeScreen>
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => NewCallChat(isCallScreen: false),
+                          builder: (context) =>
+                              NewCallChat(isCallScreen: false),
                         ),
                       );
                     },
@@ -99,19 +100,16 @@ class _HomeScreenState extends State<HomeScreen>
                     ? Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          SizedBox(
-                            height: 45,
-                            width: 45,
-                            child: FloatingActionButton(
-                              elevation: 2,
-                              backgroundColor: Colors.black,
-                              onPressed: () {
-                                print('Write Status Button Pressed');
-                              },
-                              child: const Icon(
-                                Icons.edit,
-                                color: Colors.white,
-                              ),
+                          FloatingActionButton(
+                            mini: true,
+                            elevation: 2,
+                            backgroundColor: Colors.black,
+                            onPressed: () {
+                              print('Write Status Button Pressed');
+                            },
+                            child: const Icon(
+                              Icons.edit,
+                              color: Colors.white,
                             ),
                           ),
                           const SizedBox(height: 10),
@@ -135,7 +133,8 @@ class _HomeScreenState extends State<HomeScreen>
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => NewCallChat(isCallScreen: true),
+                              builder: (context) =>
+                                  NewCallChat(isCallScreen: true),
                             ),
                           );
                         },

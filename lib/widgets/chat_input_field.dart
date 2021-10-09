@@ -30,7 +30,7 @@ class ChatInputField extends StatelessWidget {
             Expanded(
               child: Container(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: kDefaultPadding * 0.75,
+                  horizontal: 10,
                 ),
                 decoration: BoxDecoration(
                   color: Colors.teal.withOpacity(0.05),

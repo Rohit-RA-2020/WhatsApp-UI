@@ -36,11 +36,10 @@ class ChatInputField extends StatelessWidget {
                   color: Colors.teal.withOpacity(0.05),
                   borderRadius: BorderRadius.circular(40),
                 ),
-                child: Row(
-                  children: [
-                    InkWell(
-                      onTap: () => print('Emoji Icon Pressed'),
-                      child: Icon(
+                child: Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      icon: Icon(
                         Icons.sentiment_satisfied_alt_outlined,
                         color: Theme.of(context)
                             .textTheme
@@ -48,34 +47,32 @@ class ChatInputField extends StatelessWidget {
                             .color!
                             .withOpacity(0.64),
                       ),
-                    ),
-                    const SizedBox(width: kDefaultPadding / 4),
-                    const Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: "Type message",
-                          border: InputBorder.none,
-                        ),
+                      hintText: "Type message",
+                      border: InputBorder.none,
+                      suffixIcon: Row(
+                        children: [
+                          Icon(
+                            Icons.attach_file,
+                            color: Theme.of(context)
+                                .textTheme
+                                .bodyText1!
+                                .color!
+                                .withOpacity(0.64),
+                          ),
+                          Icon(
+                            Icons.camera_alt_outlined,
+                            color: Theme.of(context)
+                                .textTheme
+                                .bodyText1!
+                                .color!
+                                .withOpacity(0.64),
+                          ),
+                        ],
                       ),
+                      suffixIconConstraints:
+                          const BoxConstraints(maxHeight: 48, maxWidth: 48),
                     ),
-                    Icon(
-                      Icons.attach_file,
-                      color: Theme.of(context)
-                          .textTheme
-                          .bodyText1!
-                          .color!
-                          .withOpacity(0.64),
-                    ),
-                    const SizedBox(width: kDefaultPadding / 4),
-                    Icon(
-                      Icons.camera_alt_outlined,
-                      color: Theme.of(context)
-                          .textTheme
-                          .bodyText1!
-                          .color!
-                          .withOpacity(0.64),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ),

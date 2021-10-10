@@ -45,36 +45,27 @@ class ChatConversation extends StatelessWidget {
           IconButton(icon: const Icon(Icons.more_vert), onPressed: () {})
         ],
       ),
-      body: Stack(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Image.network(
-            'https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png',
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            fit: BoxFit.cover,
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 30,
-                  width: 140,
-                  child: const Center(
-                      child: Text(
-                    '24 September 2021',
-                    style: TextStyle(color: kAppBarTextColor),
-                  )),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF262D31),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 30,
+              width: 140,
+              child: const Center(
+                child: Text(
+                  '24 September 2021',
+                  style: TextStyle(color: kAppBarTextColor),
                 ),
               ),
-              const ChatInputField()
-            ],
+              decoration: BoxDecoration(
+                color: const Color(0xFF262D31),
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
           ),
+          const ChatInputField()
         ],
       ),
     );

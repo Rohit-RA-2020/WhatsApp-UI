@@ -87,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen>
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              NewCallChat(isCallScreen: false),
+                              const NewCallChat(isCallScreen: false),
                         ),
                       );
                     },
@@ -134,7 +134,7 @@ class _HomeScreenState extends State<HomeScreen>
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  NewCallChat(isCallScreen: true),
+                                  const NewCallChat(isCallScreen: true),
                             ),
                           );
                         },

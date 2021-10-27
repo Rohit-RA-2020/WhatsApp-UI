@@ -3,9 +3,9 @@ import 'package:whatsapp_ui/constants.dart';
 import 'package:whatsapp_ui/widgets/new_call_chat_item.dart';
 
 class NewCallChat extends StatelessWidget {
-  NewCallChat({Key? key, required this.isCallScreen}) : super(key: key);
+  const NewCallChat({Key? key, required this.isCallScreen}) : super(key: key);
 
-  bool isCallScreen;
+  final bool isCallScreen;
 
   @override
   Widget build(BuildContext context) {
